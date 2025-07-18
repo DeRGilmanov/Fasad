@@ -587,3 +587,259 @@ footer {
   padding: 20px;
   box-shadow: 0 4px 16px rgba(0,0,0,0.1);
 }
+
+/* --- Адаптивность для мобильных устройств --- */
+@media (max-width: 900px) {
+  .grid-boxes {
+    gap: 24px;
+  }
+  .grid-box {
+    max-width: 100%;
+    flex: 1 1 100%;
+  }
+  .uteplenie-intro-image > div {
+    flex-direction: column !important;
+    gap: 20px !important;
+  }
+  .uteplenie-intro-image img {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 98%;
+    padding: 0 4px;
+  }
+  header .logo {
+    font-size: 1.2rem;
+    gap: 8px;
+  }
+  .logo-img {
+    height: 40px;
+    width: auto;
+  }
+  header nav ul.nav-links {
+    gap: 10px;
+    font-size: 0.95rem;
+    flex-wrap: wrap;
+  }
+  .promo-content {
+    margin-left: 0;
+    padding: 18px 8px;
+    max-width: 98vw;
+  }
+  .promo-content h1 {
+    font-size: 1.2rem;
+  }
+  .promo-content p {
+    font-size: 1rem;
+  }
+  .hero-grid .container {
+    padding: 0 2px;
+  }
+  .grid-boxes {
+    flex-direction: column !important;
+    gap: 18px;
+    padding: 0 2px;
+  }
+  .grid-box {
+    max-width: 100%;
+    min-width: 0;
+    padding: 12px;
+    font-size: 0.98rem;
+  }
+  .uteplenie-intro-image img {
+    max-width: 98vw;
+    height: auto !important;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .advantages-row {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .advantages-item {
+    max-width: 100%;
+    padding: 14px;
+  }
+  .footer-container {
+    flex-direction: column;
+    gap: 18px;
+    align-items: flex-start;
+  }
+  .footer-logo img {
+    width: 80px;
+  }
+  .site-footer {
+    padding: 30px 8px 10px;
+    font-size: 0.9rem;
+  }
+  .faq-section {
+    padding: 24px 4px;
+  }
+  .faq-title {
+    font-size: 1.2rem;
+  }
+}
+/* ===== Медиазапросы для мобильных устройств ===== */
+@media (max-width: 768px) {
+  /* Основной контейнер – немного уменьшить отступы */
+  .container {
+    width: 95%;
+    padding: 0 10px;
+  }
+
+  /* Шапка (header) — сделать логотип и навигацию в колонку */
+  header.navbar .logo-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  header.navbar nav ul.nav-links {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  /* Promo-секция */
+  .promo-section {
+    padding: 40px 20px;
+  }
+  .promo-content {
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+    font-size: 1rem; /* немного уменьшить размер текста */
+  }
+  .promo-content h1 {
+    font-size: 1.8rem;
+  }
+  .promo-content p {
+    font-size: 1rem;
+  }
+  .promo-content .btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+  
+  /* Grid-секции (например, .hero-grid) */
+  .grid-boxes {
+    /* Если ранее на больших экранах они выводятся в ряд, а на мобильных – в колонку */
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .grid-box {
+    width: 100%; /* растягиваем карточки на всю ширину родителя */
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 15px;
+  }
+  .grid-box h3 {
+    font-size: 1.2rem;
+  }
+  .grid-box p {
+    font-size: 0.9rem;
+  }
+  .grid-img img {
+    width: 100%;
+    height: auto;
+  }
+  .btn-outline {
+    padding: 10px 15px;
+    font-size: 1rem;
+  }
+
+  /* Price List секция */
+  .price-list-section h2 {
+    font-size: 1.8rem;
+  }
+  .price-list li {
+    font-size: 0.9rem;
+  }
+  .toggle-button {
+    padding: 10px 15px;
+    font-size: 1rem;
+  }
+
+  /* Преимущества и FAQ */
+  .advantages-container,
+  .faq-section {
+    padding: 30px 10px;
+  }
+  .advantages-title,
+  .faq-title {
+    font-size: 1.8rem;
+  }
+  .advantages-item h3 {
+    font-size: 1.2rem;
+  }
+  
+  /* Footer адаптация */
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+  .footer-nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .logo-block {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    padding: 0;
+  }
+
+  .nav-links li {
+    margin-bottom: 8px;
+  }
+
+  .uteplenie-intro-image div {
+    flex-direction: column;
+  }
+
+  .grid-box {
+    width: 100% !important;
+  }
+
+  .grid-img img {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+    align-items: center;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+
+  img.logo-img {
+    max-width: 160px;
+    height: auto;
+  }
+
+  .hero-grid .grid-boxes {
+    flex-direction: column;
+    align-items: center;
+  }
+}
