@@ -131,7 +131,7 @@ h1, h2, h3 {
 
 /* === Хедер и навигация === */
 header.navbar {
-  background: url('/img/logo3.jpeg') center center / cover no-repeat;
+ /* background: url('/img/logo3.jpeg') center center / cover no-repeat;*/
   padding: 24px 0 0 0;
 }
 
